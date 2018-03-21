@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小熊版本下拉刷新</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<script src="../framework/mui.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">下拉刷新和上拉加载</h1>
+		</header>
+		<div class="mui-content"></div>
+	</body>
+	<!--使用双 webview 模式的下拉刷新，创建一个子 webview 添加列表；拖动时，拖动的是一个完整的 webview，避免了类似 DIV 拖动流畅度不好的问题，回弹动画使用原生动画-->
+	<script type="text/javascript">
+		//启用双击监听
+		mui.init({
+			//手势配置
+			gestureConfig:{
+//				doubletap:true;
+			},
+			//双击监听
+			subpages:[{
+				url:'xbear_pullrefresh_sub.html',
+				id:'mui-content',
+				styles:{
+					top:'45px',
+					bottom:'0px'
+				}
+			}]
+			
+		});
+	</script>
+</html>

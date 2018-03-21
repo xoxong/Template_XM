@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录验证</title>
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+		<style type="text/css">
+			.c1{
+				position: fixed;
+				top: 45%;
+				left: 50%;
+			}
+			.c1 input:hover{
+				background-color:#2AC845 ;
+				color: white;
+			}
+			.fbox{
+				border: 1px solid gainsboro;
+				box-shadow: 1px 1px 15px gainsboro;
+				background: url(../../angular_mibear/Bootstrap/img/diwen1.png) repeat ;
+				position: fixed;
+				left: 22%;
+				top: 25%;
+				display: block;
+			}
+			.xx{
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				width: 20px;
+				height: 20px;
+				border: 1px solid gainsboro;
+				text-align: center;
+				line-height: 20px;
+				cursor: pointer;
+			}
+			blockquote{
+				color: red;
+				display: block;
+				font-size: 1em;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container c1">
+			<input type="button" name="" id="" value="Login" class="btn btn-default "/>
+		</div>
+		<!--表格-->
+				<table class="table">
+					<caption>记录表格</caption>
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>密码</th>
+							<th>删除</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>产品1</td>
+							<td>23/11/2013</td>
+							<td><input type="button" value="删除" class="btn btn-default"/></td>
+						</tr>
+					</tbody>
+			</table>	
+		<div class="container fbox">
+			<!--取消-->
+			<div class="xx">×</div>
+			<form class="col-md-12"> 
+			  <div class="form-group col-md-12">
+			  	<br />
+			  	<!--邮箱-->
+			    <label for="exampleInputEmail1">Email address</label>
+			    <input type="email" class="form-control emailtext inputtext" id="exampleInputEmail1" placeholder="Email" value="13765667472">
+			    <br />
+			    <!--提示-->
+			    <blockquote class="tstext1">
+				  <p>请输入正确的邮箱</p>
+				  <footer>登录提示-&nbsp;&nbsp;<cite title="Source Title">登录名不能为空或少于5个字符,邮箱或者手机</cite></footer>
+				</blockquote>
+			  </div>
+			  <div class="form-group col-md-12">
+			  	<!--密码-->
+			    <label for="exampleInputPassword1">Password</label>
+			    <input type="password" class="form-control passtext inputtext" id="exampleInputPassword1" placeholder="Password" value="q931623824">
+			      <br />
+			      <!--提示-->
+			    <blockquote class="tstext2">
+				  <p>请输入正确的密码</p>
+				  <footer>密码提示-&nbsp;&nbsp;<cite title="Source Title">以字母开头，长度在6~18之间，只能包含字母、数字和下划线</cite></footer>
+				</blockquote>
+			    <br/>
+			    <button type="button" class="btn btn-default btn_submit">Submit</button>
+			  </div>
+			</form>
+					
+		</div>
+	</body>
+	<script src="../../framework/official/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../framework/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			tstext1.css("color","#2AC845");
+			tstext2.css("color","#2AC845");
+		})
+		//判断内容
+		$(".c1 input").on("click",function(){
+			$(".fbox").css("display","block");
+		});
+		$(".xx").on("click",function(){
+			$(".fbox").css("display","none");
+			//删除元素
+			//$(".fbox").remove();
+		});
+		var emailadd=$(".emailtext");
+		var passtext=$(".passtext");
+		var tstext1=$(".tstext1 p");
+		var tstext2=$(".tstext2 p");
+		var text1=false;
+		var text2=false;
+		//失去焦点判断用户名
+		$(".inputtext").on("blur",function(){
+			jiance();
+		})
+		
+		function jiance(){
+			if(emailadd.val()==""){
+				tstext1.text("登录名不能为空或少于5个字符");
+				tstext1.css("color","red");
+					text1=false;
+			}
+			else if(!emailadd.val().match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
+				if(emailadd.val().match(/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/)){
+					tstext1.text("手机号码输入正确");
+					tstext1.css("color","#2AC845");
+					text1=true;
+				}
+				else{
+					tstext1.text("手机号码或邮箱不正确");
+					tstext1.css("color","red");
+					text1=false;
+				}
+			}
+			else{
+				tstext1.text("邮箱输入正确");
+				tstext1.css("color","#2AC845");
+					text1=true;
+			}
+		//失去焦点判断密码
+			if(!passtext.val().match(/^[a-zA-Z]\w{5,17}$/)){
+				tstext2.text("以字母开头，长度在6~18之间，只能包含字母、数字和下划线");
+				tstext2.css("color","red");
+				text2=false;
+			}else{
+				tstext2.text("密码格式正确");
+				tstext2.css("color","#2AC845");
+				text2=true;
+			}
+		}
+		
+		$(".btn_submit").on("click",function(){
+			jiance();
+			if(text1==true&&text2==true){
+				$(".fbox").css("display","none");
+				xieTable();
+				shanchu();
+			}
+			else
+			{
+				jiance();
+			}
+		})
+		
+		function xieTable(){
+			$(".table tbody").append("<tr><td>"+emailadd.val()+"</td><td>"+passtext.val()+"</td><td><input type='button' value='删除' class='btn btn-default'/></td></tr>");
+		}
+		//点击删除事件
+		function shanchu(){
+			$(".table tbody tr td input").on('click',function(){
+				//向上遍历父元素然后删除
+				$(this).parent("td").parent("tr").remove();
+			})
+		}
+		shanchu();
+	</script>
+</html>

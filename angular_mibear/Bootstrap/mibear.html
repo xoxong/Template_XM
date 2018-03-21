@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>mibear</title>
+		<!--让 IE 浏览器运行最新的渲染模式下-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--可以让部分国产浏览器默认采用高速模式渲染页面：-->
+		<meta name="renderer" content="webkit">
+		<!--为了确保适当的绘制和触屏缩放 设置 meta 属性为 user-scalable=no 可以禁用其缩放（zooming）功能-->		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/mibear.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		
+		
+	</head>
+	<body ng-app="myapp" ng-controller="contor" >
+		<!--跳到顶部  悬浮-->
+		<!--跳到顶部  悬浮-->
+		<!--跳到顶部  悬浮-->
+		<div class="upward" id="upward">
+			<ul>
+				<li class="upward-li3" onclick="upward()"><img src="img/up_1.png" alt="顶部" />返回</li>
+			</ul>
+		</div>
+		<!--跳到顶部  悬浮 end-->
+		<!--跳到顶部  悬浮 end-->
+		<div class="header_box ">
+			<!--导航-->
+			<nav>
+				<div class="container container1 " >
+					
+					<img src="img/bear_logo_512px.png" class="img_1"/> 
+					<span class="line"></span>
+					<h3>Mibear<small class="hidden-xs">web all</small></h3>
+					
+					<ul class="nav navbar navbar-right">
+						<li>项目</li>
+						<li>博客</li>
+						<li class="huancolor">心情</li>
+					</ul>
+				</div>	
+			</nav>
+			<!--搜索名称等-->
+			<div class="col-xs-12 header_main_box">
+				<h1>Mibear<small>web</small></h1>	
+				<p>This is my personal website, here I have my style, here I have my life and my values</p>
+  				<footer>watch the diversion project <kbd>Mystic entrance</kbd></footer>
+  				
+  				<div class="form-group">
+  					<input type="text" class="form-control " placeholder="Look for answers in dictionaries">
+  					
+  					<img src="img/Search.png"/>
+  					<!--搜索等待-->
+					<div class="search_fonts">
+						<img src="img/dengdai_1.png" alt="" id="xzimg" />
+					</div>
+  				</div>
+			</div>
+		</div>
+		
+		<!--学习的分类-->
+		<div class="student_menu hidden-xs">
+			<ul>
+				<li><img src="img/angular-icon.svg" alt="" /></li>
+				<li><img src="img/jquery.svg" alt="" /></li>
+				<li><img src="img/bootstrap.svg" alt="" /></li>
+			</ul>
+		</div>
+		
+		<!--展示方式-->
+		<div class="zhanshi_moshi_box">
+			<div class="container zhanshi_moshi">
+				<div class="btn-group" role="group">
+					<p>展示方式：</p>
+				  	<button type="button" class="btn btn-default"><a href="#/biaoge">表格</a></button>
+				  	<button type="button" class="btn btn-default"><a href="#/fengmao">风貌</a></button>
+				  	<button type="button" class="btn btn-default"><a href="#/shatuo">洒脱</a></button>
+				</div>
+			</div>
+		</div>
+		<!--外部加载页面-->
+		<!--<iframe id="iframe_1" src="mibear_btn1.html" width="100%" height="2000px" scrolling="yes" frameborder="0" marginheight="0"></iframe>-->
+		 <div ng-view class="ngviews ngviews1"></div>
+		<!--外部加载页面 end-->
+		
+		<div class="bottom_box">
+			<div class="container">
+				<div class="col-md-5 ">
+					<dl>
+					  <h3>关于mibear</h3>
+					  <dd>mibear Is my personal website, of course, is actually more of my project, I love githb, love more blog Garden, 
+					  	my hobby is of course foreign literature reading is my hobby, crazy excited me makes me happy and according to 
+					  	the wonderful world of course is very beautiful</dd>
+					<br />
+					<address>
+					  <strong>Twitter, Inc.</strong><br>
+					  1355 Market Street, Suite 900<br>
+					  San Francisco, CA 94103<br>
+					  <abbr title="Phone">P:</abbr> (123) 456-7890
+					</address>
+					<address>
+					  <strong>Full Name</strong><br>
+					  <a href="mailto:#" style="color: gainsboro;">first.last@example.com</a>
+					</address>
+					</dl>
+				</div>
+				<div class="col-md-2" >
+					<h3>友情链接</h3>
+						<dd>360安全中心</dd>
+						<dd>金山毒霸</dd>
+						<dd>三国终极</dd>
+						<dd>tim</dd>
+						<dd>华为科技</dd>
+						<dd>九阴真经</dd>
+				</div>
+				<div class="col-md-2">
+					<h3>web技术</h3>
+						<dd>boostrap</dd>
+						<dd>Aangularjs</dd>
+						<dd>vue.js</dd>
+						<dd>sea.js</dd>
+						<dd>Ajax</dd>
+						<dd>reart.js</dd>
+						<dd>jQurey</dd>
+				</div>
+				<div class="col-md-3 imgs">
+					<img src="img/bear_logo_512px.png"/>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jQueryRotate.2.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-1-4-6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.js"text/javascript" charset="utf-8"></script>
+		<script src="js/mibear.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mibear_up.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

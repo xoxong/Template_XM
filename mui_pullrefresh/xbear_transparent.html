@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>mui进度条</title>
+		<script src="../js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+	</head>
+	<body>
+		<!--无限循环滚动条  mui-progressbar-infinite-->
+		<div id="demo1" class="mui-progressbar mui-progressbar-infinite">
+			<span></span>
+		</div>
+</header>
+	<script type="text/javascript">
+		mui("#demo1").progressbar({progress:25}).show();
+		//关闭进度条		
+//		mui("#demo1").progressbar().hide();
+	</script>
+	</body>
+</html>

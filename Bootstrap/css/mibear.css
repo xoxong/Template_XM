@@ -1,0 +1,196 @@
+li{
+	list-style-type: none;
+}
+.header_box{
+	width: 100%;
+	height:auto;
+	padding-bottom: 40px;
+	float: left;
+	background-color: #27AE60;
+}
+.header_box nav{
+	width: 100%;
+	height: 71px;
+	/*background-color: red;*/
+}
+.header_box .container1{
+	margin: 0 auto;
+	height: 100%;
+	padding-top: 15px;
+	/*background-color: blanchedalmond;*/
+}
+@media only screen and (min-width:1200 ) {
+	.header_box .container1{
+		width: 600px;
+	}
+	
+}
+.header_box .container1 .img_1{
+	width: 40px;
+	height: auto;
+	float: left;
+}
+.header_box .container1 .line{
+	width: 2px;
+	height: 25px;
+	margin: 9px 10px;
+	background-color: white;
+	float: left;
+}
+.header_box .container1 h3{
+	color: white;
+	margin-top:9px;
+	float: left;
+}
+.header_box .container1 h3 small{
+	color:lightyellow;
+	margin-left: 5px;
+}
+.header_box .container1 ul{
+	width: auto;
+	height: 100%;
+	float: right;
+}
+.header_box .container1 ul li{
+	float: left;
+	line-height: 45px;
+	color: white;
+	margin-right: 5px;
+
+}
+
+.header_main_box {
+	text-align: center;
+	color: white;
+	padding: 0px;
+}
+.header_main_box h1 {
+	margin-top: 0px;
+	font-size: 4.5em;
+}
+.header_main_box input {
+	padding: 10px;
+	text-align: center;
+	border-radius:0 ;
+	box-shadow: none;
+	height: 50px;
+	max-width: 600px;
+	font-size: 1.2em;	
+}
+.form-group{
+	margin: 30px auto;
+	max-width: 600px;
+	position: relative;
+}
+.form-group img{
+	width: 20px;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+/*学习分类*/
+.student_menu{
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	background-color: #F5F5F5;
+	float: left;
+	border: 1px solid gainsboro;
+}
+.student_menu ul{
+	margin:0 auto ;
+	width:250px;
+	height: 100%;
+}
+.student_menu ul li{
+	width:auto;
+	height:20px ;
+	float:left;
+	margin-top: 15px;
+	margin-left: 20px;
+}
+.student_menu li img{
+	height: 100%;
+}
+	
+	
+	/*展示方式*/
+.zhanshi_moshi_box{
+	width: 100%;
+	height: 50px;
+	float: left;
+	margin: 20px 0 20px 0;
+}
+.zhanshi_moshi{
+	height: 50px;
+	margin: 0 auto;
+}
+.btn-group{
+	width: 300px;
+	float: right;
+	margin-top: 10px;
+}
+.btn-group p{
+	float: left;
+	line-height: 35px;
+	font-weight: bold;
+	font-size: 0.5em;
+}
+
+/*卡片*/
+.card_box1{
+	width: 100%;
+	margin: 0 auto;
+	float: left;
+}
+
+.card_box1 .li1{
+	height: auto;
+	/*box-shadow: 0px 0px 1px #27AE60;*/	
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+.badge{
+	background-color: #27AE60 !important;
+}
+.card_box1 .title{
+	margin-bottom: 15px;
+	font-size: 1.5em;
+}
+.card_box1 small{
+	color: gray;
+}
+.card_box1 .imgs img{
+	width:100%;
+	border: 1px solid beige;
+	margin-bottom: 10px;
+}
+/*加载更多*/
+.card_box1 .li2{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: lightslategray;
+	cursor: pointer;
+	height: 30px;
+	padding: 4px;
+}
+.card_box1 .li2:hover{
+	background-color: #27AE60;
+	color: white;
+}
+/*底部*/
+.bottom_box{
+	width: 100%;
+	height: auto;
+	background-color: #27AE60;
+	float: left;
+	margin-top: 60px;
+	color: white;
+}
+.bottom_box .imgs img{
+	width: 100%;
+}
+
+

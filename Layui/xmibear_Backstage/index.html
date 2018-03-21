@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>layout 后台大布局 - Layui</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo layui-bg-green">Xmibear 后管 <i class="layui-icon">&#xe63d;</i></div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+				<ul class="layui-nav layui-layout-left">
+					<li class="layui-nav-item">
+						<a href="">MIBEAR.CC</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">商品管理</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">用户</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">其它系统</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">邮件管理</a>
+							</dd>
+							<dd>
+								<a href="">消息管理</a>
+							</dd>
+							<dd>
+								<a href="">授权管理</a>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				
+			</div>
+
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item">
+							<a class="" href="javascript:;">首页</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">网站三要素</a>
+									<a href="javascript:;">菜单管理</a>
+									<a href="javascript:;">展示方式</a>
+									<a href="javascript:;">技术贴纸</a>
+									<a href="javascript:;">网站历史</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a class="" href="javascript:;">风格展示</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">表单数据</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">项目展示</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">表单数据</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">眼睛展示</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">表单数据</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">底部</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;">友情链接</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">web技术</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">关于网站</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="layui-body">
+				<!-- 内容主体区域 -->
+				<!--轮播图-->
+				<div style="padding: 15px;">
+				<div class="layui-carousel" id="test1">
+				  <div carousel-item>
+				    <div style="background-color: #009688;"></div>
+				    <div style="background-color: #393D49;"></div>
+				    <div style="background-color: #1E9FFF;"></div>
+				    <div style="background-color: #FFB800;"></div>
+				    <div style="background-color: #FF5722;"></div>
+				  </div>
+				</div>
+				</div>
+				
+				<!--导航-->
+				<div class="layui-tab layui-tab-brief xb_home_nav" lay-filter="docDemoTabBrief" style="padding-left: 15px;">
+				  <ul class="layui-tab-title">
+				    <li data-menu = "webSanys">网站三要素</li>
+				    <li data-menu = "menuGunali">菜单管理</li>
+				    <li data-menu = "zhanshiStyle">展示方式</li>
+				    <li data-menu = "jishuTietu">技术贴图</li>
+				    <li class="layui-this"  data-menu = "webLishi">网站历史</li>
+				  </ul>
+				  <div class="layui-tab-content"></div>
+				</div> 
+				
+				<!--网站三要素-->
+				<div>
+				<div class="xb_home_nav_content" data-menuName = "webSanys" >
+				</div>
+				<!--菜单管理-->
+				<div class="xb_home_nav_content" data-menuName = "menuGunali" >
+				</div>
+				<!--展示方式-->
+				<div class="xb_home_nav_content" data-menuName = "zhanshiStyle" >
+				</div>
+				<!--技术贴图-->
+				<div class="xb_home_nav_content" data-menuName = "jishuTietu" >
+				</div>
+				<!--网站历史-->
+				<div class="xb_home_nav_content" data-menuName = "webLishi" >
+				<ul class="layui-timeline" style="padding-left: 15px;">
+				  <li class="layui-timeline-item">
+				    <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+				    <div class="layui-timeline-content layui-text">
+				      <h3 class="layui-timeline-title">8月18日</h3>
+				      <p>
+				        mibear.cc 后台项目启动
+				        <br>项目虽小，心却不凡
+				        <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
+				      </p>
+				    </div>
+				  </li>
+				  <li class="layui-timeline-item">
+				    <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+				    <div class="layui-timeline-content layui-text">
+				      <h3 class="layui-timeline-title">5月16日</h3>
+				      <p>不管如何，我们的开始“<em>致君尧舜上，再使风俗淳</em>”随心所欲，取材于：</p>
+				      <ul>
+				        <li>《道德经》</li>
+				        <li>《茅屋为秋风所破歌》</li>
+				      </ul>
+				    </div>
+				  </li>
+				  <li class="layui-timeline-item">
+				    <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+				    <div class="layui-timeline-content layui-text">
+				      <h3 class="layui-timeline-title">2月15日</h3>
+				      <p>
+				        项目开始萌芽，这是一个好的开始
+				        <br>常常在想，尽管对这个世界有这样那样的抱怨，但我们的确生在了最好的时代
+				        <br>铭记、感恩
+				        <br>赋予我们的父母和关心我们的亲人
+				        <br>不放弃
+				      </p>
+				    </div>
+				  </li>
+				  <li class="layui-timeline-item">
+				    <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+				    <div class="layui-timeline-content layui-text">
+				      <div class="layui-timeline-title">回忆</div>
+				    </div>
+				  </li>
+				</ul>
+			</div>
+				<!--网站历史 END-->
+				</div>
+
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				<i class="layui-icon">&#xe64d;</i> © mibear.cc/admin 小熊一乐后台
+			</div>
+		</div>
+		<!--兼容媒体查询js-->
+		<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  		<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+  		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+  		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="layui/layui.js"></script>
+		<script>
+			//JavaScript代码区域
+			layui.use(['element','carousel'], function() {
+				var element = layui.element
+				,carousel = layui.carousel;
+ 				//建造实例
+			    carousel.render({
+			      elem: '#test1'
+			      ,width: '100%' //设置容器宽度
+			      ,arrow: 'always' //始终显示箭头
+			      //,anim: 'updown' //切换动画方式
+			    });
+			});
+		</script>
+	</body>
+
+</html>

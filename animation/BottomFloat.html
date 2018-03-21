@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>底部浮动窗口显示介绍</title>
+		<style type="text/css">
+			.main_box{
+				position: relative;
+				overflow:hidden;
+			}
+			.bottom_float{
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				bottom: -50px ;
+				left: 0px;
+				background-color: black;
+				filter:alpha(Opacity=60);
+				opacity: 0.6;
+				text-align: center;
+				line-height: 50px;
+			}
+			.main_box:hover .bottom_float{
+				animation:bottom_float 1s 1;
+				-webkit-animation:bottom_float 1s 1;
+				-moz-animation:bottom_float 1s 1;
+				bottom: 0px;
+			}
+			@keyframes bottom_float /* Safari 与 Chrome */
+				{
+				    0%{bottom:-50px;}
+				    100%{bottom:0px;}
+				}
+			@-moz-keyframes bottom_float /* Safari 与 Chrome */
+				{
+				    0%{bottom:-50px;}
+				    100%{bottom:0px;}
+				}
+			@-wekit-keyframes bottom_float /* Safari 与 Chrome */
+				{
+				    0%{bottom:-50px;}
+				    100%{bottom:0px;}
+				}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="main_box" style=" width:500px; height:300px;margin: 0 auto;border: 1px solid darkgrey; background-image: url(../angular_mibear/Bootstrap/img/book-img/img-1.jpg);background-size: 500px 300px;">
+			<div class="bottom_float">
+				<a style="color: white;text-decoration: none; " href="">这里是浮动页面</a>
+			</div>
+		</div>
+	</body>
+
+</html>

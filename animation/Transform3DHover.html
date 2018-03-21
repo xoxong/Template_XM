@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>transform-style实现Div的3D旋转</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+				color:white;
+			}
+			
+			.container {
+				position: relative;
+				height: 300px;
+				width: 300px;
+				/*-webkit-perspective: 500;*/
+				margin-top: 200px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			
+			.parent-keleyi-com {
+				margin: 10px;
+				width: 280px;
+				height: 320px;
+				overflow: hidden;
+				background-color: #666;
+				opacity: 1;
+				text-align: center;
+			}
+			.parent-keleyi-com img{
+				width: 280px;
+
+			}
+			
+			.parent-keleyi-com:hover {
+				-webkit-transform-style: preserve-3d;
+				-webkit-animation: spin 1s 1 linear;
+			}
+			.parent-keleyi-com>div {
+				position: absolute;
+				top: 40px;
+				left: 40px;
+				width: 280px;
+				height: 200px;
+				padding: 10px;
+				-webkit-box-sizing: border-box;
+			}	
+			/*执行Y轴旋转360度动画*/
+			
+			@-webkit-keyframes spin {
+				from {
+					-webkit-transform: rotateY(0);
+				}
+				to {
+					-webkit-transform: rotateY(-180deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+		</div>
+		<div class="container">
+			<div class="3dmain1">
+				<img src="../img/ico/1123245.png"/>	
+				<a href="">风景很好</a>
+			</div>
+			<div class="3dmain2">
+				<img src="../img/ico/1123245.png"/>	
+				<a href="">风景很好</a>
+			</div>
+		</div>
+	</body>
+
+</html>

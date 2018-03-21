@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>hover显示浮动窗口</title>
+		<style type="text/css">
+			.main_box{
+				width: 700px;
+				height: 450px;
+				background: url(../angular_mibear/Bootstrap/img/book-img/img-4.jpg) no-repeat;
+				background-size: 700px 450px;
+				margin: 0 auto;
+				padding-top: 50px;
+			}
+			
+			.main_box:hover .floating_window{
+				display: block;
+				animation:floating_window 1s 1;
+				-webkit-animation:floating_window 1s 1;
+				-moz-animation:floating_window 1s 1;
+			}
+			@keyframes floating_window /* Safari 与 Chrome */
+				{
+				    0%{filter:alpha(Opacity=10);opacity: 0.1;}
+				    100%{filter:alpha(Opacity=100);opacity:1;}
+				}
+			@-webkit-keyframes floating_window /* Safari 与 Chrome */
+				{
+				    0%{filter:alpha(Opacity=10);opacity: 0.1;}
+				    100%{filter:alpha(Opacity=100);opacity:1;}
+				}
+			@-moz-keyframes floating_window /* Safari 与 Chrome */
+				{
+				    0%{filter:alpha(Opacity=10);opacity: 0.1;}
+				    100%{filter:alpha(Opacity=100);opacity:1;}
+				}
+				
+			.floating_window{
+				width: 500px;
+				height: 350px;
+				background-color: coral;
+				margin: 0 auto;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+			<div class="main_box">
+				<div class="floating_window">
+				
+				</div>
+			</div>
+	</body>
+</html>

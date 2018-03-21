@@ -1,0 +1,3 @@
+
+.xb_home_nav_content{display: none;}
+.xb_home_nav_content:nth-of-type(5){display: block;}

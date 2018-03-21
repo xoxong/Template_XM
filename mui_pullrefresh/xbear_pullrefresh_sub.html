@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>小熊版本下拉刷新子页面（加载）</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<script src="../framework/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--模拟的数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" style="text-align: center;">数据1</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" style="text-align: center;">数据2</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" style="text-align: center;">数据3</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" style="text-align: center;">数据4</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" style="text-align: center;">数据5</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			mui.init({
+				//参数配置下拉刷新各项参数
+				pullRefresh:{
+					container:"#pullrefresh",
+					down:{
+						callback:pulldownRefresh
+					},
+					up:{
+						contentrefresh:'正在加载ing.....',
+						callback:pullupRefresh
+					}
+				}
+			});
+			
+			//下拉刷新具体实现
+			function pulldownRefresh() {
+				setTimeout(function(){
+					var table=document.body.querySelector('.mui-table-view');
+					var cells=document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i=cells.length,len=i+3;i<len;i++) {
+						//创建节点
+						var li=document.createElement('li');
+						li.className='mui-table-view-cell';
+						li.innerHTML='<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						//下拉刷新，新纪录插在最前面
+
+						table.insertBefore(li,table.firstChild);
+					}
+					//当获取新数据后，都需要执行 endPulldown 方法， 该方法的作用是关闭“正在刷新”的样式提示，内容区域回滚顶部位置
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				},1500);
+			}
+			var count=0;
+			//上拉加载
+			function pullupRefresh(){
+				setTimeout(function (){
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count>2));//参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = cells.length, len = i + 5; i < len; i++) {
+						//创建节点
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						table.appendChild(li);
+					}
+				},1500);
+			}
+		</script>
+</script>
+	</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>mui AJAX 测试</title>
+		<script src="../js/official/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="button" value="ajax获取数据" class="butotn1" />
+		<input type="button" value="getjson获取数据" class="butotn2" />
+		<ul></ul>
+		<script type="text/javascript">
+			$(function(){
+				$(".butotn1").on('click',function(){
+					//mui.ajax获取数据
+					mui.ajax("new_file.txt",{
+						dataType:'json',
+						type:'get',
+						timeout:100,
+						success:function(data){
+							$.each(data,function(i,n){
+								$("ul").append(n["optionValue"]+"<br />");
+							})
+						},
+						error:function(xhr,type,errorThrow){
+							alert(type);
+						}
+					})
+				});
+				
+//				$(".butotn2").on('click',function(){
+//					//mui.ajax获取数据
+//					mui.get('new_file.txt',function(data){
+//						$.each(data,function(i,n){
+//								$("ul").append(n["optionKey"]+"<br />");
+//						},'json')
+//					})
+//				});
+			});
+			
+		</script>
+	</body>
+</html>

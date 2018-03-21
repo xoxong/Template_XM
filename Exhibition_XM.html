@@ -1,0 +1,219 @@
+<!--
+	作者：931623824@qq.com
+	时间：2017-03-25
+	描述：简单模板页面，非商业用途，mibear私有vv
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--<meta http-equiv=“X-UA-Compatible” content=“IE=5″>-->
+		<title></title>
+		<!--模板页面的加载-->
+		<link rel="stylesheet" type="text/css" href="css/Exhibition_XM.css"/>
+
+	</head>
+	<body oncopy="return false" oncut="return false" >
+		<!--居中边框-->
+		<div class="box_xm">
+		
+<!--------------------------------------分类标题 表单以及表单元素--------------------------------------->
+<!--------------------------------------分类标题 表单以及表单元素--------------------------------------->
+<!--------------------------------------分类标题 表单以及表单元素--------------------------------------->
+		<div class="templete_title">一.表单以及表单元素</div>
+		
+		<!--窗口震动 shock(震动)-->
+		<div class="Window_box"><p><span>1</span>窗口震动</p>
+			<input type="button" name="button1" id="button1" value="左右震动" onclick="shock_x(5)" />
+			<input type="button" name="button2" id="button2" value="上下震动" onclick="shock_y(5)" />
+			<input type="button" name="button3" id="button3" value="全屏震动" onclick="shock_xy(5)" />
+
+		</div>
+		
+		<!--自动选择文本框/编辑框中的文字-->
+		<div class="Window_box"><p><span>2</span>自动选择文本框/编辑框中的文字</p>
+			<input type="text" name="text1" id="text1" value="测试自动选择文本框的所有内容" onclick="select_txt()"/>
+			<textarea name="textarea1" id="textarea1" cols="50" rows="6"  onclick="select_textarea()">测试自动选择文本框的所有内容</textarea>
+		</div>
+		
+		<!--多级联动菜单-->
+		<div class="Window_box mod_2"><p><span>3</span>多级联动菜单</p>
+			<form action="" method="post" name="form_x3">
+			<select name="select_x3" id="select_x3" onchange="changeMenu_x3(arr_x3[document.form_x3.select_x3.options[document.form_x3.select_x3.selectedIndex].text],document.form_x3.select2_x3)">
+				<option selected>请选择...</option>
+				<option>数码设备</option>
+				<option>家用电器</option>
+				<option>礼品工艺</option>
+			</select>
+			<select name="select2_x3" id="select2_x3">
+				<option>请选择类别...</option>
+			</select>
+			</form>
+		</div>
+		
+		<!--可以输入文字的下拉菜单-->
+		<div class="Window_box mod_2"><p><span>4</span>可以输入文字的下拉菜单</p>
+			<form name="form_x4">
+				<!--onkeypress 事件会在键盘按键被按下并释放一个键时发生  
+					onkeyup 当用户释放键盘按钮时执行-->
+				<select name="select_x4" id="select_x4" onkeypress="add_x4(3)" onkeyup="edit_x4(3)">
+					<option selected>新进成员</option>
+					<option >游侠</option>
+					<option >斑竹</option>
+				</select>
+			</form>
+		</div>
+		
+		<!--分级下拉列表-->
+		<div class="Window_box mod_2"><p><span>5</span>分级下拉列表</p>
+			<select name="">
+				<option>------</option>
+				<optgroup label="web设计">
+				<option>网站建设</option>
+				<option>网站设计</option>
+				</optgroup>
+				<optgroup label="软件世界">
+				<option>软件工程</option>
+				<option>软件应用</option>
+				</optgroup>
+			</select>
+		</div>
+		
+		<!--让密码域无法复制-->
+		<div class="Window_box mod_2"><p><span>6</span>让密码域无法复制</p>
+			<input type="password" size="12" maxlength="50" oncopy="return false" oncut="return false" onpaste="return false" style="font-family:wingdingsd;" />
+		</div>
+
+<!--------------------------------------分类标题 实用JavaScript函数--------------------------------------->
+<!--------------------------------------分类标题 实用JavaScript函数--------------------------------------->
+<!--------------------------------------分类标题 实用JavaScript函数--------------------------------------->
+		<div class="templete_title">二.实用JavaScript函数</div>
+		<!--显示长日期格式的系统日期-->
+		<div class="Window_box"><p><span>7</span>显示长日期格式的系统日期</p>
+			<input type="text" name="" id="td_x7" value="" size="50px"/>
+		</div>
+		
+		<!--无法复制网页内容-->
+		<div class="Window_box"><p><span>8</span>无法复制网页内容</p>
+			 <p>oncopy="return false" oncut="return false"</p>  
+		</div>
+
+<!--------------------------------------分类标题 日期和时间--------------------------------------->
+<!--------------------------------------分类标题 日期和时间--------------------------------------->
+<!--------------------------------------分类标题 日期和时间--------------------------------------->
+		<div class="templete_title">三.日期和时间</div>
+		<!--使用tolocalestring方法获取本地时间-->
+		<div class="Window_box"><p><span>9</span>使用tolocalestring() 方法获取本地时间</p>
+			<input type="" name="input_x9" id="input_x9" value="" />
+		</div>
+
+		<!--退出页面时显示停留时间-->
+		<div class="Window_box"><p><span>10</span>退出页面时显示停留时间</p>
+			<input type="button" size="10px" name="input_x10" id="input_x10" value="点击显示退出时间" onclick="outtime_x10()" />
+		</div>
+
+		<!--显示用户在页面的停留时间-->
+		<div class="Window_box"><p><span>11</span>显示用户在页面的停留时间</p>
+			<input type="text" name="input_x11" id="input_x11" value=""/>
+		</div>
+
+		<!--使用document的lastModified属性显示文档最后修改时间-->
+		<div class="Window_box"><p><span>12</span>使用document的lastModified属性显示文档最后修改时间</p>
+			<input type="text" name="input_x12" id="input_x12" value="" size="50px"/>
+		</div>
+
+		<!--判断指定年份是否是闰年-->
+		<div class="Window_box"><p><span>13</span>判断指定年份是否是闰年</p>
+			请输入一个四位数的年份：<input type="text" name="text_x13" id="text_x13" value=""/>
+			<input type="button" name="" id="" value="计算" onclick="fun_x13();"/>
+			<input type="text" name="text2_13" id="text2_x13" value="" />
+		</div>
+
+		<!--返回两个时间的间隔小时-->
+		<div class="Window_box"><p><span>14</span>返回两个时间的间隔小时</p>
+			输入开始日期：(格式日/月/年)<input type="text" name="text_x14" id="text_x14" value="1/2/2017"/>
+			输入结束日期：<input type="text" name="text2_x14" id="text2_x14" value="2/2/2017"/>
+			&nbsp;<input type="button" name="" value="计算" onclick="fun_x14();"/>
+			间隔小时<input type="text" name="text3_x14" id="text3_x14" value="" />
+		</div>
+
+		<!--计时器-->
+		<div class="Window_box"><p><span>15</span>计时器</p>
+			<input type="text" name="" id="text_x15" value=""/>秒
+			<input type="text" name="" id="text2_x15" value=""/>毫秒
+			<input type="button" value="开始" onclick="getdateq_x15()"/>
+			<input type="button" value="终止" onclick="sstop_x15()"/>
+			<!-- 隐藏表单-->
+			<input type="hidden" name="hidetext" id="hidetext"/>
+		</div>
+
+<!--------------------------------------分类标题 文字特效--------------------------------------->
+<!--------------------------------------分类标题 文字特效--------------------------------------->
+<!--------------------------------------分类标题 文字特效--------------------------------------->
+		<div class="templete_title">四.文字特效</div>
+		<!--五颜六色的字体颜色-->
+		<div class="Window_box"><p><span>16</span>五颜六色的字体颜色</p>
+			<div class="a_x16" id="a_x16"></div>
+		</div>
+
+		<!--追逐点亮的文字-->
+		<div class="Window_box"><p><span>17</span>追逐点亮的文字</p>
+			<div class="a_x17" id="a_x17"></div>
+		</div>
+
+<!--------------------------------------分类标题 超级链接特效--------------------------------------->
+<!--------------------------------------分类标题 超级链接特效--------------------------------------->
+<!--------------------------------------分类标题 超级链接特效--------------------------------------->
+		<div class="templete_title">五.超级链接特效</div>
+
+		<!--单击将本页加入收藏夹-->
+		<div class="Window_box"><p><span>18</span>单击将本页加入收藏夹</p>
+			<a href="#" id="a_x18" name="a_x18" onclick="add_x18()"> 单击将本页加入收藏夹</a>
+		</div>
+
+<!--------------------------------------分类标题 图形图像与多媒体--------------------------------------->
+<!--------------------------------------分类标题 图形图像与多媒体--------------------------------------->
+<!--------------------------------------分类标题 图形图像与多媒体--------------------------------------->
+		<div class="templete_title">六.图形图像与多媒体</div>
+
+<!--------------------------------------分类标题 页面特效--------------------------------------->
+<!--------------------------------------分类标题 页面特效--------------------------------------->
+<!--------------------------------------分类标题 页面特效--------------------------------------->
+		<div class="templete_title">七.页面特效</div>
+
+		<!--页首页尾切换-->
+		<div class="Window_box"><p><span>19</span>页首页尾切换</p>
+			<input type="button" value="跳转" onclick="fun_x19()"/>
+		</div>
+
+		<!--页面动画效果：下雪-->
+		<div class="Window_box" id="id_x20"><p><span>20</span>页面动画效果：下雪</p>
+
+		</div>
+
+
+<!--------------------------------------分类标题 状态栏特效--------------------------------------->
+<!--------------------------------------分类标题 状态栏特效--------------------------------------->
+<!--------------------------------------分类标题 状态栏特效--------------------------------------->
+		<div class="templete_title">八.状态栏特效</div>
+
+		<!--显示鼠标坐标-->
+		<div class="Window_box" id="id_x21"><p><span>21</span>显示鼠标坐标</p>
+			<input type="text" name="" id="input_x21" size="50px"/>
+		</div>
+
+<!--------------------------------------分类标题 网站安全--------------------------------------->
+<!--------------------------------------分类标题 网站安全--------------------------------------->
+<!--------------------------------------分类标题 网站安全--------------------------------------->
+		<div class="templete_title">九.网站安全</div>
+
+
+
+
+
+
+
+		</div><!--居中边框  END-->
+		<script src="js/Exhibition_XM.js" type="text/javascript" charset="utf-8" ></script>
+	</body>
+</html>

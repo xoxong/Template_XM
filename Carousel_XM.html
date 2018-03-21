@@ -1,0 +1,48 @@
+
+<!--
+	作者：931623824@qq.com
+	时间：2017-05-13
+	描述：模板-自制滚动条
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/Carousel_XM.css"/>
+		<script src="js/official/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Carousel_XM.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div class="contern" id="contern">
+			<!--image-->
+			<!--当你从最后一张图切换回第一张图时，有很大空白，利用两张辅助图来填补这个空白。
+				这里补充下无缝滚动，直接看代码，复制最后一张图片放置第一张图片前，同时复制第一张图片放置最后一张图片的后面。
+				并且，将第一张图片辅助图（实际上是实际显示的第5张图片隐藏起来，故设置style="left: -600px;"）-->
+			<div class="list" id="list" style="left: -750px;">
+				<ul>
+					<li><img src="img/img-4.jpg" alt="" /></li>
+					<li><img src="img/img-1.jpg" alt="" /></li>
+					<li><img src="img/img-2.jpg" alt="" /></li>
+					<li><img src="img/img-3.jpg" alt="" /></li>
+					<li><img src="img/img-4.jpg" alt="" /></li>
+					<li><img src="img/img-1.jpg" alt="" /></li>
+				</ul>
+			</div>
+			<!--button-->
+			<div class="buttons" id="buttons">
+				<ul>
+					<li index=1 id="on" class="on"></li>
+					<li index=2 ></li>
+					<li index=3 ></li>
+					<li index=4 ></li>
+				</ul>
+			</div>
+			<!--left right button-->
+			<a href="javascript:;" class="prev arrow" id="prev">&lt;</a>
+			<a href="javascript:;" class="next arrow" id="next">&gt;</a>
+		</div>
+	</body>
+</html>

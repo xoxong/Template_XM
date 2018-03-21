@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+       <script src="../../framework/angular-1-4-6.min.js"></script>
+       <script src="../../framework/angular-ui-router.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="f"></script>
+</head>
+<body ng-app="myApp">
+ <h1>首页</h1>
+	<div>
+	    <span><a ui-sref="mainTab" href="">mian</a></span>
+	    <span><a ui-sref="mainTab2" href="">mia1</a></span>
+	</div>
+    <div ui-view=""></div>
+    <script type="text/javascript">
+    	//main主页的模块myApp依赖模块ui.router
+		var app=angular.module('myApp',['ui.router']);
+		app.config(["$stateProvider", "$urlRouterProvider",function($stateProvider,$urlRouterProvider){
+		    //默认路由到mainTab
+		    $urlRouterProvider.when('', '/mainTab/tab2');
+		    $stateProvider.state('mainTab', {
+		        url: '/mainTab',
+		        templateUrl: 'mainTab.html'
+		        //mainTab.tab1 即mainTab/tab1 二级嵌套
+		    }).state('mainTab.tab1', {
+		            url: '/tab1',
+		            templateUrl: 'tab1.html'
+		    }).state('mainTab.tab2', {
+		        url: '/tab2',
+		        templateUrl: 'tab2.html'
+		    }).state('mainTab.tab3', {
+		        url: '/tab3',
+		        templateUrl: 'tab3.html'
+		    }).state('mainTab2', {
+		        url: '/mainTab2',
+		        templateUrl: 'mainTab2.html'
+		        //mainTab.tab1 即mainTab/tab1 二级嵌套
+		    }).state('mainTab2.tab11', {
+		            url: '/tab11',
+		            templateUrl: 'tab11.html'
+		    });
+		    
+		   
+		}]);
+    </script>
+</body>
+	
+</html>

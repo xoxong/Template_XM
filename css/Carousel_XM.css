@@ -1,0 +1,95 @@
+*{
+	margin: 0;padding: 0;
+	text-decoration: none;
+}
+li{
+	list-style-type: none;
+}
+body{
+	padding: 100px;
+}
+/*隐藏其他的图片*/
+.contern{
+	width: 750px;height: 400px;
+	border: 1px solid rgba(0,0,0,0.3);
+	position: relative;
+	overflow: hidden;
+}
+/*使用定位显示第二张图片*/
+.contern .list{
+	width: 4500px;
+	height: 400px;
+	position: absolute;
+}
+.contern .list ul{
+	width: 4500px;
+	height: 400px;
+}
+.contern ul li{
+	width:750px;
+	height: 400px;
+	float: left;
+}
+.contern ul li img{
+	width: 750px;
+	height: 400px;
+}
+/*按钮*/
+.buttons {
+	width:auto;
+	height: 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 10%;
+	z-index: 2;
+}
+.buttons ul li {
+	width: 20px;
+	height: 10px;
+	float: left;
+	margin-left: 10px;
+	border-radius:10px;
+	box-sizing: border-box;
+	border: 3px solid white;
+	box-shadow: 0px 0px 10px black;
+	-moz-box-shadow: 0px 0px 10px black;
+	-webkit-box-shadow: 0px 0px 10px black;
+	background-color: gainsboro;
+	cursor: pointer;
+}
+.buttons ul .on {
+	background-color: red;
+}
+/*左右*/
+.arrow{
+	width: 40px ;
+	height: 70px;
+	position: absolute;
+	top: 45%;
+	z-index: 2;
+	font-size: 40px;
+	line-height: 65px;
+	text-align: center;
+	display: none;
+	color: white;
+}
+.contern:hover .arrow{
+display: block;
+	animation: slider_arrow 1s forwards;
+}
+@keyframes slider_arrow{
+	0% {background-color:rgba(0,0,0,0.1);}
+    100% {background-color:rgba(0,0,0,0.7);}
+}@-moz-keyframes slider_arrow{
+	0% {background-color:rgba(0,0,0,0.1);}
+    100% {background-color:rgba(0,0,0,0.7);}
+}@-webkit-keyframes slider_arrow{
+	0% {background-color:rgba(0,0,0,0.1);}
+    100% {background-color:rgba(0,0,0,0.7);}
+}@-o-keyframes slider_arrow{
+	0% {background-color:rgba(0,0,0,0.1);}
+    100% {background-color:rgba(0,0,0,0.7);}
+}
+.next{
+	right: 0px;
+}

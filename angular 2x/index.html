@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Angular 2x</title>
+		<!--模块加载器-->
+		<script src="lib/system.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/angular2x.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//设置模块加载规则
+			System.baseURL=document.baseURI;
+			System.config({
+				map:{traceur:"lib/traceur"},
+				traceurOptions:{annotations:true}
+			});
+		</script>
+	</head>
+	<body>
+		<pre class="logger"></pre>
+		+
+		<!--定义一个ES6的脚本元素-->
+		<script type="module">
+			export class logger{
+			constructor(){
+				this.el=document.querySelector("pre.logger");
+				this.lines=[];
+			}
+			log(str){
+				this.lines.push(str);
+				this.el.textContent=this.lines.join("\n");
+			}
+		}
+			//实例化，测试一下
+			var _=new logger();
+			_.log("哎哟，我开始了呢");
+		</script>
+	</body>
+</html>

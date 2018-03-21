@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>地图展示</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link rel="stylesheet" type="text/css" href=""/>
+   		<script src="../framework/official/jquery-2.1.4.js" type="text/javascript" charset="utf-8"></script>
+   		
+		<!--key=4c795cef874704e7d2238fc8a6a24620  32f50ba0ad9b877ba09894a227a486f5-->
+		<!--中英文地图-->
+		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+		<link rel="stylesheet" type="text/css" href="css/map_index.css"/>
+   		<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    	<script src="http://webapi.amap.com/maps?v=1.3&key=4c795cef874704e7d2238fc8a6a24620&plugin=AMap.CitySearch,AMap.PlaceSearch,AMap.AdvancedInfoWindow,AMap.Autocomplete,AMap.Walking,AMap.Driving,AMap.Riding"></script>
+		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+   		
+   		<script src="js/map_index.js" type="text/javascript" charset="utf-8"></script>
+		</head>
+
+	<body>
+		
+	<!--基础地图-->
+	<div id="container"></div>
+	<!--关键字检索-->
+	<div id="panel"></div>
+	
+	<!--中英文地图-->
+	<div class="xm_language_switching">
+		<a id="zh_cn" class="xm_language_switching_a">CN</a>
+		<a id="en" class="xm_language_switching_a">EN</a>
+		<a id="zh_en" class="xm_language_switching_a">C/E</a>
+	</div>
+	<!--ip定位-->
+	<div class="xm_language_switching xm_ip">
+		<a class="xm_language_switching_a xm_ip_2">IP</a>
+	</div>
+	<!--浏览器定位-->
+	<div class="xm_language_switching xm_ip2">
+		<a class="xm_language_switching_a xm_ip2_2">精</a>
+	</div>
+	<!--改变背景-->
+	<div class="xm_language_switching xm_bg">
+		<a class="xm_language_switching_a xm_a" data-bg = "normal">正常</a>
+		<a class="xm_language_switching_a xm_a" data-bg = "dark">雅黑</a>
+		<a class="xm_language_switching_a xm_a" data-bg = "macaron">克龙</a>
+	</div>
+	<!--图层-->
+	<div class="xm_language_switching xm_tc">
+		<a class="xm_language_switching_a xm_a1" id="xm_tc_a1" data-tc="1">路况</a>
+		<a class="xm_language_switching_a xm_a2" id="xm_tc_a2" data-tc="2">3D</a>
+		<a class="xm_language_switching_a xm_a2" id="xm_tc_a3" data-tc="3">卫星</a>
+	</div>
+	<!--测量-->
+	<div class="xm_language_switching xm_cl">
+		<a class="xm_language_switching_a xm_cl_1">直线</a>
+		<a class="xm_language_switching_a xm_cl_2">面积</a>
+	</div>
+	<!--关键词搜索-->
+	<div class="xm_search1">
+		<input type="text" class="input_1" id="xm_search1_input_1" placeholder="地址"/>
+		<input type="button" name="button"  class="input_2" value="搜索" />
+	</div>
+	<!--步行-->
+	<div class="xm_search1 xm_lx">
+		<input type="text" class="input_3" id="xm_lx_input1" placeholder="起点" />
+		<input type="text" class="input_3" id="xm_lx_input2" placeholder="终点" />
+		<input type="button" name="button" class="input_lx input_lx1" value="步行" />
+		<input type="button" name="button" class="input_lx input_lx2" value="骑行" />
+		<input type="button" name="button" class="input_lx input_lx3" value="驾车" />
+	</div>
+	</body>
+</html>

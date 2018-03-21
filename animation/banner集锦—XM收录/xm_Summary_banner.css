@@ -1,0 +1,27 @@
+/*reset*/
+*{margin: 0;padding: 0;}
+input{outline: none;text-decoration: none;}
+a{text-decoration: none;}
+body{background:url(img/diwen1.png);}
+
+/*content*/
+.xm_main{width: 882px;height: auto;margin: 0 auto;margin-top: 50px;}
+.xm_main .m_a{font-size: 50px; color: black;font-weight: bold;font-family: fantasy; width: 100%;height: auto;text-align: center;float: left;margin-bottom: 50px;}
+.xm_main .main_title{width: 100%; height: auto;float: left; margin: 30px;margin-left: 0;margin-top: 0;font-size: 20px;}
+.xm_main .main_title1{font-weight: bold;}
+
+/*modular_zong*/
+.modular_zong{float: left;}
+/*modular_1*/
+.modular_1{margin-left: 10%;margin-top: -25px;margin-bottom: 30px;}
+/*modular_2*/
+.modular_2{margin-left: -15%;margin-bottom: 10px;}
+/*modular_3*/
+.modular_3{margin-left: -80px;margin-bottom: 50px;margin-top: 20px;}
+/*modular_3_2*/
+.modular_3_2{margin-left: -80px;margin-bottom: 50px;margin-top: 20px;}
+/*modular_4*/
+.modular_4{width: 1200px;height: 380px;margin-left: -150px;margin-bottom: 25px;}
+/*modular_5*/
+.modular_5{margin-left: -150px;margin-bottom: 25px;}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>angular $http的使用</title>
+		<script src="../framework/angular_1.6.4.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="myapp" ng-controller="contor">
+		<ul>
+			<li ng-repeat="x in names">
+				<!--层级数据-->
+				<!--{{ x.Name + ', ' + x.Country }}-->
+				<!--单层数据-->
+				{{ x.optionKey + ', ' + x.optionValue }}
+			</li>
+		</ul>
+		<script type="text/javascript">
+			var myapp=angular.module('myapp',[]);
+			myapp.controller('contor',function($scope,$http){
+				//写法
+//				$http({
+//					method:'GET',
+//					url:'ceshishuju100.json'
+//				}).then(function successCallback(response){
+//					$scope.names = response.data.records;
+//				},function errorCallback(response){
+//					alert("4555");
+//				});
+
+				//简写 层级数据
+//				 $http.get("ceshishuju100.json")
+//				.then(function (response) {$scope.names = response.data.records;});
+  				
+  				//单层数据
+  				$http({
+						method:'GET',
+						url:'new_file.txt'
+					}).then(function successCallback(response){
+						$scope.names = response.data;
+					},function errorCallback(response){
+						alert("4555");
+				});
+			})
+		</script>
+	</body>
+</html>

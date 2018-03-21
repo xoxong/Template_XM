@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>hover 样式下图片切换</title>
+		<script src="../framework/official/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--style-->
+		<style type="text/css">
+			.main_box{
+				width: 1500px;
+				height: 500px;
+				/*background-color: #CCCCCC;*/
+				margin: 100px auto;
+			}
+			.picture_switching{
+				width: 100%;
+				height: auto;
+				
+			}
+			.picture_switching .li{
+				width: 100px;
+				height: 100px;
+				border-radius: 100px;
+				-moz-border-radius: 100px;
+				-webkit-border-radius: 100px;
+				float: left;
+				border: 1px solid gainsboro;
+				list-style: none;
+				overflow: hidden;
+				margin: 10px;
+				position: relative;
+			}
+			.picture_switching .li img:nth-of-type(1){
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			.picture_switching .li:hover img:nth-of-type(1){
+				display: none;
+			}
+			.picture_switching .li:hover img:nth-of-type(2){
+				display: block;
+			}
+			
+			.picture_switching .li img:nth-of-type(2){
+				width:auto;
+				height: 100px;
+				position: relative;
+				left: 0px;
+				top: 0px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--main-->
+		<div class="main_box">
+			<ul class="picture_switching">
+				<li class="li">
+					<img src="../img/ico/1123244.png" alt="" />
+					<img src="../angular_mibear/Bootstrap/img/book-img/img-1.jpg" alt="" />
+				</li>
+				<li class="li">
+					<img src="../img/ico/1123245.png" alt="" />
+					<img src="../angular_mibear/Bootstrap/img/book-img/img-2.jpg" alt="" />
+				</li>
+				<li class="li">
+					<img src="../img/ico/1123249.png" alt="" />
+					<img src="../angular_mibear/Bootstrap/img/book-img/img-3.jpg" alt="" />
+				</li>
+				<li class="li">
+					<img src="../img/ico/1123250.png" alt="" />
+					<img src="../angular_mibear/Bootstrap/img/book-img/img-4.jpg" alt="" />
+				</li>
+				<li class="li">
+					<img src="../img/ico/1174523.png" alt="" />
+					<img src="../angular_mibear/Bootstrap/img/book-img/img-5.jpg" alt="" />
+				</li>
+			</ul>
+		</div>
+		<!--js-->
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

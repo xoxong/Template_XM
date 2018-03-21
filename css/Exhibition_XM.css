@@ -1,0 +1,62 @@
+body{
+
+}
+
+.box_xm{
+
+	width: 988px;
+	height: auto;
+	margin: 0 auto;
+}
+/*标题*/
+.templete_title{
+	width: 300px;
+	height: 20px;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.3em;
+	background-color: black;
+	color: white;
+	padding: 10px;
+	margin-top: 20px;
+	float: left;
+}
+/*项目边框*/
+.Window_box{
+	width:100%;
+	height: auto;
+	margin-top: 20px;
+	background-color:lightgrey;
+	border-radius: 5px;
+	padding: 10px;
+	float: left;
+}
+/*结构伪类选择器 选择父级下的最后一个同种标签*/
+div:last-of-type{
+	margin-bottom: 20px;
+}
+
+.mod_2{
+	width: 45% !important;
+	margin-right: 20px;
+}
+.Window_box:hover{
+	box-shadow: 1px 1px 10px gray;
+}
+
+.Window_box p{
+	width: auto;
+	height: auto;
+	border-radius: 5px;
+	padding: 10px;
+	font-weight: bold;
+		
+	
+}
+.Window_box p span{
+	background-color: black;
+	padding: 10px;
+	color: white;
+	margin-right: 10px;
+}
+/*项目边框  END*/

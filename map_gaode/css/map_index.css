@@ -1,0 +1,180 @@
+body{
+	/*不允许选中*/
+	 -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
+}
+li{
+	list-style-type: none;
+}
+.xm_language_switching{
+	width: 40px;
+	height: auto;
+	background-color:  #323232;
+	border: 1px solid #323232;
+	box-shadow: 0px 0px 5px #ACACB4;
+	border-radius:30px ;
+	position: absolute;
+	top: 20px;
+	left: 70px;
+	overflow: hidden;
+}
+
+.xm_language_switching .xm_language_switching_a{
+	width: 100%;
+	height: 30px;
+	float: left;
+	color: white;
+	font-size: 0.5em;
+	text-align: center;
+	line-height:30px;
+	cursor: pointer;
+}
+.xm_language_switching .xm_language_switching_a:hover{
+	color: black;
+	font-weight: bold;
+	background-color: white;
+}
+
+/*ip定位*/
+.xm_ip{
+	top:120px
+}
+/*浏览器定位*/
+.xm_ip2{
+	top:158px
+}
+/*改变背景*/
+.xm_bg{
+	top:198px;
+	
+}
+/*图层*/
+.xm_tc{
+	left: 130px;
+}
+/*测量*/
+.xm_cl{
+	top: 120px;
+	left: 130px;
+}
+/*窗口*/
+   .info-title{
+            color: white;
+            font-size: 14px;
+            background-color: blue;
+            line-height: 26px;
+            padding: 0px 0 0 6px;
+            font-weight: lighter;
+            letter-spacing: 1px
+        }
+        .info-content{
+            padding: 4px;
+            color: #666666;
+            line-height: 23px;
+            font: 12px Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial;
+        }
+        .info-content img{
+            float: left;
+            margin: 3px;
+        }
+        
+/*关键词搜索*/
+.xm_search1 {
+	width: 250px;
+	height: 30px;
+	background-color:  #323232;
+	border: 1px solid #323232;
+	box-shadow: 0px 0px 5px #ACACB4;
+	border-radius:30px ;
+	position: absolute;
+	top: 20px;
+	left: 220px;
+	overflow: hidden;
+}
+/*查询路线*/
+.xm_lx{
+	width:auto;
+	left: 500px;
+}
+.xm_lx .input_3{
+	width: 200px ;
+	height: 25px ;
+	padding-left: 5px;
+	float: left;
+}
+
+.xm_lx .input_lx{
+	width: 40px ;
+	height: 30px ;
+	color: white;
+	float: left;
+	background-color:#323232;
+	border: 0px;
+	margin-right: 10px;
+}
+.xm_search1 .input_1{
+	width: 200px ;
+	height: 25px ;
+	padding-left: 5px;
+	float: left;
+	
+}
+.xm_search1 .input_2{
+	width: 40px ;
+	height: 30px ;
+	color: white;
+	float: left;
+	background-color:#323232;
+	border: 0px;
+}
+/*搜索*/
+ #panel {
+            position: absolute;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: 10px;
+            right: 10px;
+            width: 280px;
+        }
+
+
+/*.button-group{
+
+	width:193px ;
+	height: 30px;
+	position: absolute;
+	bottom: 20px;
+	left:-145px;
+	padding: 0px !important;
+}
+.button-group2{
+	width:auto;
+	height:25px;
+	position: absolute;
+	bottom: 50px;
+	left:0px;
+	padding: 2.5px !important;
+	background-color:#242424 !important;
+	color: white !important;
+	font-size: 0.4em; 
+}
+.button-group .button{
+	text-align: center !important;
+	background-color: #242424;
+	line-height: 17px;
+	float: left;
+	margin-right: 5px;
+}
+.button-group .dianji{
+	width: 40px;
+	height:auto;
+	display: block;
+	margin: 5px;
+	text-align: center !important;
+	background-color: #242424;
+	color: white;
+	float: left;
+	font-size: 0.5em !important;
+	border: 0px !important;
+	cursor: pointer;
+}*/

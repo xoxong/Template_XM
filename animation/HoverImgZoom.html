@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hover(transform)中心点放大</title>
+    <style type="text/css">
+        .HoverImgZoom{
+           	margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            overflow:hidden;
+            position: relative;
+        }
+        .img2{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 0;right: 0;bottom: 0;left: 0;
+            margin: auto;
+            transition: all .4s;
+            -moz-transition: all .4s;
+            -webkit-transition: all .4s;
+            -o-transition: all .4s;
+            cursor: pointer;
+        }
+        .img2:hover{
+            zoom:1;
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -o-transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="HoverImgZoom">
+        <img class="img2" src="../angular_mibear/Bootstrap/img/book-img/img-2.jpg" alt="">
+    </div>
+</body>
+</html>

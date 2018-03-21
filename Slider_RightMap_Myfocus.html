@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>右侧缩略图切换jQuery焦点图(小熊版)----------myfocus</title>
+		<!--一引入myfocus库-->
+		<script src="Myfocus_dist/myfocus-2.0.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入风格文件-->
+		<script src="Myfocus_dist/mf-pattern/mF_pithy_tb.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="Myfocus_dist/mf-pattern/mF_pithy_tb.css"/>
+		
+		<script type="text/javascript">
+			myFocus.set({
+			    id:'boxID',//焦点图盒子ID
+			    pattern:'mF_pithy_tb',//风格应用的名称
+			    time:3,//切换时间间隔(秒)
+			    trigger:'click',//触发切换模式:'click'(点击)/'mouseover'(悬停)
+			    width:450,//设置图片区域宽度(像素)
+			    height:296,//设置图片区域高度(像素)
+			    txtHeight:'default'//文字层高度设置(像素),'default'为默认高度，0为隐藏
+			});
+</script>
+	</head>
+	<body>
+	<div id="boxID">
+		<!--载入画面(可删除)-->
+		<div class="pic">
+			<!--内容列表(li数目可随意增减)-->
+			<ul>
+				<li>
+					<a href="#"><img src="img/img-1.jpg" thumb="" alt="标题1" text="详细描述1" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/img-2.jpg" thumb="" alt="标题2" text="详细描述2" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/img-3.jpg" thumb="" alt="标题3" text="详细描述3" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/img-4.jpg" thumb="" alt="标题4" text="详细描述4" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="img/img-5.jpg" thumb="" alt="标题5" text="详细描述5" /></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</body>
+</html>
