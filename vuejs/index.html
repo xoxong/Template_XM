@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>测试文件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model="ab1">
+        <a v-bind:messgae="ab1"></a>
+    </div>
+    <script type="text/javascript">
+        Vue.component('xb1',{
+            props:['messgae'],
+            template:'<h1>{{messgae}}</h1>'
+        })
+        var vm = new Vue({
+            el: '#app',
+            data:{
+                ab1:"ASdsad"
+            },
+        })
+    </script>
+    <style>
+    </style>
+</body>
+
+</html>
